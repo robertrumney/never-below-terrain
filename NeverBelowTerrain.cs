@@ -41,10 +41,10 @@ public class NeverBelowTerrain : MonoBehaviour
         // Calculate the height of the terrain at the player's position.
         float terrainHeight = nearestTerrain.SampleHeight(playerPos);
 
-        // Compare the height of the terrain to the player's height.
+        // Compare the height of the terrain at the game object's position to the game object's y position in world space.
         if (playerPos.y < terrainHeight)
         {
-            // If the distance between the player and the terrain is greater than a small threshold, push the player up.
+            // If the game object's y position is lower than the height of the terrain at its current position, set its y position to the height of the terrain at that position.
             transform.position = new Vector3(transform.position.x, terrainHeight, transform.position.z);
         }
     }
