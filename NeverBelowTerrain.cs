@@ -15,10 +15,7 @@ public class NeverBelowTerrain : MonoBehaviour
     {
         // Create an array to store the results of the OverlapSphere call
         Collider[] hits = Physics.OverlapSphere(transform.position, maxDistance);
-
-        // Set the initial nearestTerrain variable to null
-        nearestTerrain = null;
-
+        
         // Iterate through the array of colliders
         foreach (Collider collider in hits)
         {
