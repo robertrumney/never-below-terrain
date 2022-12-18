@@ -34,7 +34,7 @@ public class NeverBelowTerrain : MonoBehaviour
         if (!nearestTerrain) this.enabled = false;
 
         // Schedule the script to be destroyed after a small delay
-        Destroy(gameObject, destroyDelay);
+        Destroy(this, destroyDelay);
     }
 
     private void Update()
