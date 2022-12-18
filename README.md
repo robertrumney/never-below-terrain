@@ -10,7 +10,9 @@ The script will automatically start working as soon as it is attached to a game 
 maxDistance: The maximum distance to check for the terrain using a raycast.
 destroyDelay: The amount of time to wait before destroying this script.
 ## License
-This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license, which means you are free to use and adapt the script for any purpose, including commercially, without credit.
+This project is licensed under the Creative Commons CC0 1.0 Universal (CC0 1.0) Public Domain Dedication license, which means you are free to use and adapt the script for any purpose, including commercially, without the need to provide attribution. This includes the right to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the script.
+
+Please note that this license does not grant you the right to claim the script as your own or to prevent others from using it. It also does not provide any warranties or liability protections for the script. You are responsible for ensuring that the script is suitable for your needs and for any consequences of using it.
 
 ## Credits
 Created by Robert Rumney.
