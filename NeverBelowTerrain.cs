@@ -15,7 +15,7 @@ public class NeverBelowTerrain : MonoBehaviour
     {
         // Create an array to store the results of the OverlapSphere call
         Collider[] hits = Physics.OverlapSphere(transform.position, maxDistance);
-        
+
         // Iterate through the array of colliders
         foreach (Collider collider in hits)
         {
@@ -30,6 +30,10 @@ public class NeverBelowTerrain : MonoBehaviour
             }
         }
 
+        // Disable the script if no terrains are found
+        if (!nearestTerrain) this.enabled = false;
+
+        // Schedule the script to be destroyed after a small delay
         Destroy(gameObject, destroyDelay);
     }
 
