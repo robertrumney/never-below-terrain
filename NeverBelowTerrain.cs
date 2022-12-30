@@ -11,6 +11,10 @@ public class NeverBelowTerrain : MonoBehaviour
     // A reference to the nearest terrain component.
     private Terrain nearestTerrain;
 
+    // A configurable field that determines whether or not to destroy the script.
+    [SerializeField]
+    private bool destroyScript = false;
+
     private void Awake()
     {
         // Create an array to store the results of the OverlapSphere call
@@ -33,8 +37,8 @@ public class NeverBelowTerrain : MonoBehaviour
         // Disable the script if no terrains are found
         if (!nearestTerrain) this.enabled = false;
 
-        // Schedule the script to be destroyed after a small delay
-        Destroy(this, destroyDelay);
+        // Check the value of the destroyScript field. If it is true, schedule the script to be destroyed after a small delay.
+        if (destroyScript) Destroy(this, destroyDelay);
     }
 
     private void Update()
